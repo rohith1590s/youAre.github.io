@@ -40,6 +40,12 @@
             color: #ffe3e3;
         }
 
+        h8 {
+            font-size: 1em;
+            margin-bottom: 30px;
+            color: #ffe3e3;
+        }
+
         button {
             padding: 15px 30px;
             margin: 15px;
@@ -98,6 +104,16 @@
             document.getElementById("message").style.display = "none";
             var responseDiv = document.getElementById("response");
             responseDiv.style.display = "block";
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "response_handler.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Handle response if needed
+                }
+            };
+            xhr.send("response=" + (yes ? "yes" : "no"));
+
             if (yes) {
                 responseDiv.innerHTML = "<h1>Yes! Then write 'accepted' in the blanks of the letter and give the letter back</h1>";
                 responseDiv.innerHTML += "<img src='celebration.gif' alt='Celebration'>";
