@@ -49,7 +49,7 @@
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: #ffe3e3;
+            color: #ffffff;
         }
 
         @keyframes textGlow {
@@ -171,14 +171,15 @@
     <div class="overlay"></div>
     <div id="message" style="display: none;">
         <h1>Will you love me? ❤️</h1>
-        <h5>NOTE: You can only choose any one of the options only once</h5>
+        <h2>i know this is all of a sudden</h2>
+        <h5>WARNING: You can only choose any one of the options only once</h5>
         <button onclick="respond('yes')">Yes 😊</button>
         <button onclick="respond('no')">No 😢</button>
         <button onclick="respond('bf')">I have a bf 😶</button>
     </div>
     <div id="response" style="display: none;"></div>
     <div id="nameInputContainer">
-        <h2>Please enter your name</h2>
+        <h2>Can i know your name plzz.</h2>
         <input type="text" id="nameInput" placeholder="Your Name">
         <button id="submitNameButton" onclick="submitName()">Submit</button>
     </div>
@@ -190,7 +191,7 @@
     </form>
 
     <div id="note">
-        <p>I created this webpage for you only 😊️</p>
+        <p>I created this webpage only for you 😊️</p>
     </div>
 
     <script>
@@ -218,7 +219,7 @@
                 responseDiv.innerHTML += "<img src='https://example.com/cute_no.png' alt='Cute No'>";
             } else if (answer === 'bf') {
                 responseInput.value = "you are too late I already have bf 💔";
-                responseDiv.innerHTML = "<h2>Oh, I see. I appreciate your honesty. 💔</h2>";
+                responseDiv.innerHTML = "<h2>Oop's i didn't saw that comming Oh, I see. I appreciate your honesty. 💔</h2>";
                 responseDiv.innerHTML += "<img src='https://example.com/cute_bf.png' alt='Cute BF'>";
             }
 
@@ -234,9 +235,9 @@
                 // Submit the form after 10 seconds
                 setTimeout(function() {
                     document.getElementById("responseForm").submit();
-                }, 10000);
+                }, 10);
             } else {
-                alert("Please enter your name.");
+                alert("Can i know your name plzz.");
             }
         }
 
