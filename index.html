@@ -42,7 +42,8 @@
 </head>
 <body>
     <div id="message" style="display: none;">
-        <h1>Will you marry me?</h1>
+        <h1>Will you love me?</h1>
+        <h5>NOTE: you can only choose one of the option for only one time</h5>
         <button onclick="respond(true)">Yes</button>
         <button onclick="respond(false)">No</button>
     </div>
@@ -50,7 +51,7 @@
     <script>
         function showMessage() {
             var currentDate = new Date();
-            var targetDate = new Date("2024-07-15T10:00:00"); // Set your target date and time here
+            var targetDate = new Date("2024-07-14"); // Set your target date and time here
             if (currentDate >= targetDate) {
                 document.getElementById("message").style.display = "block";
             }
@@ -61,10 +62,10 @@
             var responseDiv = document.getElementById("response");
             responseDiv.style.display = "block";
             if (yes) {
-                responseDiv.innerHTML = "<h1>She said YES!</h1>";
+                responseDiv.innerHTML = "<h1>yes, then write accepted in the blanks of the letter give the letter back</h1>";
                 responseDiv.innerHTML += "<img src='celebration.gif' alt='Celebration' style='max-width: 100%; height: auto;'>";
             } else {
-                responseDiv.innerHTML = "<h1>She said NO...</h1>";
+                responseDiv.innerHTML = "<h1>can you tell me why? write it in the blanks in that letter and give it back (^_^)</h1>";
                 responseDiv.innerHTML += "<img src='crying.gif' alt='Crying' style='max-width: 100%; height: auto;'>";
             }
         }
