@@ -17,6 +17,7 @@
             color: white;
             margin: 0;
             overflow: hidden;
+            background-attachment: fixed;
         }
 
         #message, #response {
@@ -81,15 +82,19 @@
             from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
+
+        .emoji {
+            font-size: 2em;
+        }
     </style>
 </head>
 <body>
     <div class="overlay"></div>
     <div id="message" style="display: none;">
-        <h1>Will you love me?</h1>
+        <h1>Will you love me? ❤️</h1>
         <h5>NOTE: You can only choose one of the options one time</h5>
-        <button onclick="respond(true)">Yes</button>
-        <button onclick="respond(false)">No</button>
+        <button onclick="respond(true)">Yes 😊</button>
+        <button onclick="respond(false)">No 😢</button>
     </div>
     <div id="response" style="display: none;"></div>
     <script>
@@ -106,11 +111,11 @@
             var responseDiv = document.getElementById("response");
             responseDiv.style.display = "block";
             if (yes) {
-                responseDiv.innerHTML = "<h1>Yes! Then write 'accepted' in the blanks of the letter and give the letter back</h1>";
-                responseDiv.innerHTML += "<img src='celebration.gif' alt='Celebration'>";
+                responseDiv.innerHTML = "<h2>Yes! 🎉 Then write 'accepted' in the blanks of the letter and give the letter back 💌</h2>";
+                responseDiv.innerHTML += "<img src='https://example.com/celebration.gif' alt='Celebration'>";
             } else {
-                responseDiv.innerHTML = "<h1>It's ok but can you tell me why? Write it in the blanks in that letter and give it back (^_^).</h1>";
-                responseDiv.innerHTML += "<img src='crying.gif' alt='Crying'>";
+                responseDiv.innerHTML = "<h2>It's ok but can you tell me why? Write it in the blanks in that letter and give it back 😞</h2>";
+                responseDiv.innerHTML += "<img src='https://example.com/crying.gif' alt='Crying'>";
             }
         }
 
